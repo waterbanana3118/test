@@ -1,33 +1,104 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>副網站測試頁</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Noto Sans TC", sans-serif;
-      background: linear-gradient(to bottom right, #dfefff, #b6d2f7);
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-    h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 18px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Hi! 這是我的副網站 🎈</h1>
-  <p>歡迎光臨！你現在看到的是 <code>/test</code> 頁面</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>更新日誌 - 水獺的個人主頁</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Noto Sans TC', sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: #2c3e50;
+      }
+
+      .log-entry {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .log-entry:hover {
+        transform: translateY(-5px);
+      }
+
+      .log-entry h2 {
+        font-size: 24px;
+        color: #2980b9;
+      }
+
+      .log-entry p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .log-entry .date {
+        font-size: 14px;
+        color: #888;
+        margin-top: 10px;
+      }
+
+      .content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .log-entry .read-more {
+        font-size: 14px;
+        color: #2980b9;
+        text-decoration: none;
+        margin-top: 10px;
+        display: inline-block;
+      }
+
+      .log-entry .read-more:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>更新日誌</h1>
+
+      <!-- 更新日誌條目 -->
+      <div class="log-entry">
+        <h2>2025年4月22日 - 網站設計更新</h2>
+        <p>今天對網站進行了一些設計上的改進，更新了首頁的排版，增加了更直觀的側邊欄導覽功能。</p>
+        <span class="date">發布於：2025年4月22日</span>
+        <a href="#" class="read-more">閱讀更多...</a>
+      </div>
+
+      <div class="log-entry">
+        <h2>2025年4月20日 - 添加社群連結</h2>
+        <p>我們增加了 Instagram 和 YouTube 連結，方便大家了解更多資訊。</p>
+        <span class="date">發布於：2025年4月20日</span>
+        <a href="#" class="read-more">閱讀更多...</a>
+      </div>
+
+      <div class="log-entry">
+        <h2>2025年4月15日 - 首次上線</h2>
+        <p>網站第一次正式發布，包含基本介紹、作品展示和聯絡方式。</p>
+        <span class="date">發布於：2025年4月15日</span>
+        <a href="#" class="read-more">閱讀更多...</a>
+      </div>
+    </div>
+  </body>
 </html>
