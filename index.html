@@ -16,6 +16,7 @@
       height: 100%;
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
 
     body {
@@ -39,7 +40,7 @@
     }
 
     .log-entry {
-      background-color: rgba(0, 0, 0, 0.5); /* 改成半透明深色背景更清楚 */
+      background-color: rgba(0, 0, 0, 0.5);
       border-radius: 10px;
       padding: 20px;
       margin: 10px 0;
@@ -80,9 +81,82 @@
     .log-entry .read-more:hover {
       text-decoration: underline;
     }
+
+    /* ==== 左上角漢堡按鈕 ==== */
+    .menu-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      z-index: 1001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      backdrop-filter: blur(6px);
+      transition: background 0.3s;
+    }
+
+    .menu-button:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .menu-icon {
+      font-size: 20px;
+      color: white;
+    }
+
+    /* ==== 側邊欄樣式 ==== */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(8px);
+      padding: 60px 20px;
+      transition: left 0.3s ease-in-out;
+      z-index: 1000;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 20px 0;
+      font-size: 16px;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+
+  <!-- 左上角漢堡按鈕 -->
+  <button class="menu-button" onclick="toggleSidebar()">
+    <span class="menu-icon">&#9776;</span>
+  </button>
+
+  <!-- 側邊欄 -->
+  <div class="sidebar" id="sidebar">
+    <a href="#">尚未更新</a>
+    <a href="#">尚未更新</a>
+    <a href="#">尚未更新</a>
+    <a href="https://waterbanana3118.github.io/" target="_self">回首頁</a>
+  </div>
+
+  <!-- 主要內容 -->
   <div class="content">
     <h1>更新日誌</h1>
 
@@ -107,5 +181,12 @@
       <a href="#" class="read-more">閱讀更多...</a>
     </div>
   </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+  </script>
+
 </body>
 </html>
