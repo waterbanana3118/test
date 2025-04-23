@@ -24,65 +24,9 @@
       color: #fff;
       background: url('background.png') no-repeat center center/cover;
       background-attachment: fixed;
-      text-align: center;
     }
 
-    h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      color: #f8f8f8;
-    }
-
-    .content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    .log-entry {
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
-      padding: 20px;
-      margin: 10px 0;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
-      text-align: left;
-    }
-
-    .log-entry:hover {
-      transform: translateY(-5px);
-    }
-
-    .log-entry h2 {
-      font-size: 24px;
-      color: #00bfff;
-    }
-
-    .log-entry p {
-      font-size: 16px;
-      color: #f0f0f0;
-      line-height: 1.6;
-    }
-
-    .log-entry .date {
-      font-size: 14px;
-      color: #ccc;
-      margin-top: 10px;
-    }
-
-    .log-entry .read-more {
-      font-size: 14px;
-      color: #66ccff;
-      text-decoration: none;
-      margin-top: 10px;
-      display: inline-block;
-    }
-
-    .log-entry .read-more:hover {
-      text-decoration: underline;
-    }
-
-    /* ==== 左上角漢堡按鈕 ==== */
+    /* ==== 選單漢堡按鈕 ==== */
     .menu-button {
       position: fixed;
       top: 20px;
@@ -139,11 +83,84 @@
     .sidebar a:hover {
       text-decoration: underline;
     }
+
+    /* ==== 主要內容 ==== */
+    .content {
+      max-width: 800px;
+      margin-left: 280px;
+      padding: 40px 20px;
+      text-align: left;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #f8f8f8;
+    }
+
+    .log-entry {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .log-entry:hover {
+      transform: translateY(-5px);
+    }
+
+    .log-entry h2 {
+      font-size: 24px;
+      color: #00bfff;
+    }
+
+    .log-entry p {
+      font-size: 16px;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    .log-entry .date {
+      font-size: 14px;
+      color: #ccc;
+      margin-top: 10px;
+    }
+
+    .log-entry .read-more {
+      font-size: 14px;
+      color: #66ccff;
+      text-decoration: none;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    .log-entry .read-more:hover {
+      text-decoration: underline;
+    }
+
+    /* 響應式 - 小螢幕置中 */
+    @media (max-width: 768px) {
+      .content {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      .sidebar {
+        width: 100%;
+        left: -100%;
+      }
+
+      .sidebar.active {
+        left: 0;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- 左上角漢堡按鈕 -->
+  <!-- 漢堡選單按鈕 -->
   <button class="menu-button" onclick="toggleSidebar()">
     <span class="menu-icon">&#9776;</span>
   </button>
@@ -156,7 +173,7 @@
     <a href="https://waterbanana3118.github.io/" target="_self">回首頁</a>
   </div>
 
-  <!-- 主要內容 -->
+  <!-- 更新日誌內容 -->
   <div class="content">
     <h1>更新日誌</h1>
 
