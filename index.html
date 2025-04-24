@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -103,6 +104,25 @@
       width: 100%;
     }
 
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #fff;
+    }
+
+    .card h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
     .link-card {
       width: 100%;
       max-width: 100%;
@@ -112,56 +132,24 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s;
       text-align: left;
-      padding: 14px;
     }
     .link-card:hover {
       transform: translateY(-3px);
     }
-
-    /* 大標題和小標題的樣式 */
-    .link-card h2 {
-      font-size: 24px;
-      color: #2980b9; /* 藍色 */
-      margin-bottom: 8px;
+    .link-card-content {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px;
     }
-
+    .link-card img {
+      width: 36px;
+      height: 36px;
+    }
     .link-card p {
+      margin: 4px 0 0;
       font-size: 14px;
-      color: #333; /* 黑色 */
     }
-
-    /* 新增大標題的樣式 */
-    .main-title {
-      font-size: 40px;
-      color: white;
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    /* 手機與平板自適應樣式 */
-    @media (max-width: 768px) {
-      /* 鎖定側邊欄寬度，讓其在手機上顯示 */
-      .sidebar {
-        width: 200px;
-        padding: 50px 15px;
-      }
-
-      /* 調整大標題的字體 */
-      .main-title {
-        font-size: 30px;
-      }
-
-      /* 調整文字框架大小 */
-      .link-card {
-        padding: 10px;
-      }
-
-      /* 調整字體大小 */
-      .link-card h2 {
-        font-size: 20px;
-      }
-    }
-
   </style>
 </head>
 <body>
@@ -173,35 +161,37 @@
 
   <!-- 側邊欄 -->
   <div class="sidebar" id="sidebar">
+    <a href="https://waterbanana3118.github.io">首頁</a>
     <a href="#">尚未更新</a>
     <a href="#">尚未更新</a>
-    <a href="#">尚未更新</a>
-    <a href="https://waterbanana3118.github.io/test/" target="_blank">更新日誌</a>
+    <a href="https://waterbanana3118.github.io/test/">更新日誌</a>
   </div>
 
   <div class="hero">
     <div class="overlay"></div>
-
-    <!-- 顯示主標題 -->
-    <div class="main-title">
-      小龍貓あ彼多
-    </div>
-
     <div class="card">
-      <!-- 新增的框，包含大標小標 -->
+      <img class="avatar" src="your-avatar.webp" alt="頭像">
+      <h1>小龍貓あ彼多</h1>
+      <p>居然這個網站會更新?!</p>
+
       <div class="link-card">
-        <h2>2025年4月22日 - 網站設計更新</h2>
-        <p>今天對網站進行了一些設計上的改進，更新了首頁的排版，增加了更直觀的側邊欄導覽功能。</p>
+        <div class="link-card-content">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+          <div>
+            <strong>YouTube</strong>
+            <p>小龍貓あ彼多</p>
+          </div>
+        </div>
       </div>
 
       <div class="link-card">
-        <h2>2025年4月20日 - 添加社群連結</h2>
-        <p>我們增加了 Instagram 和 YouTube 連結，方便大家了解更多資訊。</p>
-      </div>
-
-      <div class="link-card">
-        <h2>2025年4月15日 - 首次上線</h2>
-        <p>網站第一次正式發布，包含基本介紹、作品展示和聯絡方式。</p>
+        <div class="link-card-content">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+          <div>
+            <strong>Instagram</strong>
+            <p>@waterbanana3118</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
