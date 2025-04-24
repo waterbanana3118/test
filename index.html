@@ -3,30 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>更新日誌</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <title>個人主頁</title>
+  <link rel="icon" href="favicon.webp" type="image/webp">
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
-    html, body {
+    body, html {
       height: 100%;
-      margin: 0;
-      padding: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      color: #fff;
       overflow-x: hidden;
     }
 
-    body {
-      font-family: 'Noto Sans TC', sans-serif;
-      color: #fff;
-      background: url('background.png') no-repeat center center/cover;
-      background-attachment: fixed;
-    }
-
-    /* ==== 選單漢堡按鈕 ==== */
+    /* ==== 左上角漢堡按鈕 ==== */
     .menu-button {
       position: fixed;
       top: 20px;
@@ -44,11 +36,9 @@
       backdrop-filter: blur(6px);
       transition: background 0.3s;
     }
-
     .menu-button:hover {
       background: rgba(255, 255, 255, 0.3);
     }
-
     .menu-icon {
       font-size: 20px;
       color: white;
@@ -67,11 +57,9 @@
       transition: left 0.3s ease-in-out;
       z-index: 1000;
     }
-
     .sidebar.active {
       left: 0;
     }
-
     .sidebar a {
       display: block;
       color: white;
@@ -79,88 +67,76 @@
       margin: 20px 0;
       font-size: 16px;
     }
-
     .sidebar a:hover {
       text-decoration: underline;
     }
 
-    /* ==== 主要內容 ==== */
-    .content {
-      max-width: 800px;
-      margin-left: 280px;
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('background.png') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       padding: 40px 20px;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(3px);
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background: transparent;
+      border: none;
+      backdrop-filter: none;
+      box-shadow: none;
+      padding: 0;
+      max-width: 800px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .link-card {
+      width: 100%;
+      max-width: 100%;
+      margin: 12px auto;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
       text-align: left;
     }
-
-    h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      color: #f8f8f8;
+    .link-card:hover {
+      transform: translateY(-3px);
     }
-
-    .log-entry {
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
-      padding: 20px;
-      margin: 10px 0;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
-    }
-
-    .log-entry:hover {
-      transform: translateY(-5px);
-    }
-
-    .log-entry h2 {
-      font-size: 24px;
-      color: #00bfff;
-    }
-
-    .log-entry p {
-      font-size: 16px;
-      color: #f0f0f0;
-      line-height: 1.6;
-    }
-
-    .log-entry .date {
-      font-size: 14px;
-      color: #ccc;
-      margin-top: 10px;
-    }
-
-    .log-entry .read-more {
-      font-size: 14px;
-      color: #66ccff;
+    .link-card a {
+      display: flex;
+      align-items: center;
+      gap: 14px;
       text-decoration: none;
-      margin-top: 10px;
-      display: inline-block;
+      color: #333;
+      padding: 14px;
     }
-
-    .log-entry .read-more:hover {
-      text-decoration: underline;
+    .link-card img {
+      width: 36px;
+      height: 36px;
     }
-
-    /* 響應式 - 小螢幕置中 */
-    @media (max-width: 768px) {
-      .content {
-        margin-left: 0;
-        padding: 20px;
-      }
-
-      .sidebar {
-        width: 100%;
-        left: -100%;
-      }
-
-      .sidebar.active {
-        left: 0;
-      }
+    .link-card p {
+      margin: 4px 0 0;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
-  <!-- 漢堡選單按鈕 -->
+  <!-- 左上角漢堡按鈕 -->
   <button class="menu-button" onclick="toggleSidebar()">
     <span class="menu-icon">&#9776;</span>
   </button>
@@ -170,32 +146,33 @@
     <a href="#">尚未更新</a>
     <a href="#">尚未更新</a>
     <a href="#">尚未更新</a>
-    <a href="https://waterbanana3118.github.io/" target="_self">回首頁</a>
+    <a href="https://waterbanana3118.github.io/test/" target="_blank">更新日誌</a>
   </div>
 
-  <!-- 更新日誌內容 -->
-  <div class="content">
-    <h1>更新日誌</h1>
+  <div class="hero">
+    <div class="overlay"></div>
+    <div class="card">
+      <!-- 刪除頭像和兩行字 -->
+      
+      <div class="link-card" id="youtube">
+        <a href="https://www.youtube.com/@小龍貓あ彼多" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+          <div>
+            <strong>YouTube</strong>
+            <p>小龍貓あ彼多</p>
+          </div>
+        </a>
+      </div>
 
-    <div class="log-entry">
-      <h2>2025年4月22日 - 網站設計更新</h2>
-      <p>今天對網站進行了一些設計上的改進，更新了首頁的排版，增加了更直觀的側邊欄導覽功能。</p>
-      <span class="date">發布於：2025年4月22日</span>
-      <a href="#" class="read-more">閱讀更多...</a>
-    </div>
-
-    <div class="log-entry">
-      <h2>2025年4月20日 - 添加社群連結</h2>
-      <p>我們增加了 Instagram 和 YouTube 連結，方便大家了解更多資訊。</p>
-      <span class="date">發布於：2025年4月20日</span>
-      <a href="#" class="read-more">閱讀更多...</a>
-    </div>
-
-    <div class="log-entry">
-      <h2>2025年4月15日 - 首次上線</h2>
-      <p>網站第一次正式發布，包含基本介紹、作品展示和聯絡方式。</p>
-      <span class="date">發布於：2025年4月15日</span>
-      <a href="#" class="read-more">閱讀更多...</a>
+      <div class="link-card" id="instagram">
+        <a href="https://www.instagram.com/waterbanana3118/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+          <div>
+            <strong>Instagram</strong>
+            <p>@waterbanana3118</p>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 
