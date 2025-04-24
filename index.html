@@ -112,25 +112,22 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s;
       text-align: left;
+      padding: 14px;
     }
     .link-card:hover {
       transform: translateY(-3px);
     }
-    .link-card a {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-      color: #333;
-      padding: 14px;
+
+    /* 大標題和小標題的樣式 */
+    .link-card h2 {
+      font-size: 24px;
+      color: #2980b9; /* 藍色 */
+      margin-bottom: 8px;
     }
-    .link-card img {
-      width: 36px;
-      height: 36px;
-    }
+
     .link-card p {
-      margin: 4px 0 0;
       font-size: 14px;
+      color: #333; /* 黑色 */
     }
   </style>
 </head>
@@ -152,26 +149,21 @@
   <div class="hero">
     <div class="overlay"></div>
     <div class="card">
-      <!-- 刪除頭像和兩行字 -->
-      
-      <div class="link-card" id="youtube">
-        <a href="https://www.youtube.com/@小龍貓あ彼多" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
-          <div>
-            <strong>YouTube</strong>
-            <p>小龍貓あ彼多</p>
-          </div>
-        </a>
+      <!-- 新增兩個框，包含大標小標 -->
+
+      <div class="link-card">
+        <h2>2025年4月22日 - 網站設計更新</h2>
+        <p>今天對網站進行了一些設計上的改進，更新了首頁的排版，增加了更直觀的側邊欄導覽功能。</p>
       </div>
 
-      <div class="link-card" id="instagram">
-        <a href="https://www.instagram.com/waterbanana3118/" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-          <div>
-            <strong>Instagram</strong>
-            <p>@waterbanana3118</p>
-          </div>
-        </a>
+      <div class="link-card">
+        <h2>2025年4月20日 - 添加社群連結</h2>
+        <p>我們增加了 Instagram 和 YouTube 連結，方便大家了解更多資訊。</p>
+      </div>
+
+      <div class="link-card">
+        <h2>2025年4月15日 - 首次上線</h2>
+        <p>網站第一次正式發布，包含基本介紹、作品展示和聯絡方式。</p>
       </div>
     </div>
   </div>
