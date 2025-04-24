@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -76,7 +75,7 @@
       left: 50%;
       transform: translateX(-50%);
       z-index: 1002;
-      font-size: 30px;
+      font-size: 60px;
       font-weight: bold;
       color: white;
     }
@@ -113,48 +112,42 @@
       width: 100%;
     }
 
-    .card p {
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
-
     .link-card {
       width: 100%;
       max-width: 100%;
       margin: 12px auto;
-      border-radius: 14px;
-      background: rgba(0, 0, 0, 0.4);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
+      border-radius: 16px;
+      background: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: none;
       text-align: left;
     }
-    .link-card:hover {
-      transform: translateY(-3px);
-    }
+
     .link-card-content {
       padding: 14px;
     }
+
+    .link-card strong {
+      color: #33ccff;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
     .link-card p {
       margin: 4px 0 0;
-      font-size: 18px;
-      color: #3399ff;
-    }
-    .link-card strong {
-      color: #fff;
+      font-size: 16px;
+      color: #ffffff;
     }
   </style>
 </head>
 <body>
 
-  <!-- 頁面標題 -->
   <div class="site-title">小龍貓あ彼多</div>
 
-  <!-- 左上角漢堡按鈕 -->
   <button class="menu-button" onclick="toggleSidebar()">
     <span class="menu-icon">&#9776;</span>
   </button>
 
-  <!-- 側邊欄 -->
   <div class="sidebar" id="sidebar">
     <a href="https://waterbanana3118.github.io">首頁</a>
     <a href="#">尚未更新</a>
