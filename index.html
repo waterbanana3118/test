@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>更新日誌</title>
+  <title>個人主頁</title>
   <link rel="icon" href="favicon.webp" type="image/webp">
   <style>
     * {
@@ -137,6 +137,31 @@
       text-align: center;
       margin-top: 20px;
     }
+
+    /* 手機與平板自適應樣式 */
+    @media (max-width: 768px) {
+      /* 鎖定側邊欄寬度，讓其在手機上顯示 */
+      .sidebar {
+        width: 200px;
+        padding: 50px 15px;
+      }
+
+      /* 調整大標題的字體 */
+      .main-title {
+        font-size: 30px;
+      }
+
+      /* 調整文字框架大小 */
+      .link-card {
+        padding: 10px;
+      }
+
+      /* 調整字體大小 */
+      .link-card h2 {
+        font-size: 20px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -157,14 +182,13 @@
   <div class="hero">
     <div class="overlay"></div>
 
-    <!-- 新增白色大標題 -->
+    <!-- 顯示主標題 -->
     <div class="main-title">
       小龍貓あ彼多
     </div>
 
     <div class="card">
       <!-- 新增的框，包含大標小標 -->
-
       <div class="link-card">
         <h2>2025年4月22日 - 網站設計更新</h2>
         <p>今天對網站進行了一些設計上的改進，更新了首頁的排版，增加了更直觀的側邊欄導覽功能。</p>
