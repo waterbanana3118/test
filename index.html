@@ -70,6 +70,21 @@
       text-decoration: underline;
     }
 
+    .site-title {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1002;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 6px 16px;
+      border-radius: 12px;
+      backdrop-filter: blur(4px);
+    }
+
     .hero {
       position: relative;
       width: 100%;
@@ -102,11 +117,6 @@
       width: 100%;
     }
 
-    .card h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
     .card p {
       font-size: 16px;
       margin-bottom: 20px;
@@ -117,7 +127,7 @@
       max-width: 100%;
       margin: 12px auto;
       border-radius: 14px;
-      background: rgba(0, 0, 0, 0.4); /* 黑色 40% 透明 */
+      background: rgba(0, 0, 0, 0.4);
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s;
       text-align: left;
@@ -140,10 +150,15 @@
 </head>
 <body>
 
+  <!-- 頁面標題 -->
+  <div class="site-title">小龍貓あ彼多</div>
+
+  <!-- 左上角漢堡按鈕 -->
   <button class="menu-button" onclick="toggleSidebar()">
     <span class="menu-icon">&#9776;</span>
   </button>
 
+  <!-- 側邊欄 -->
   <div class="sidebar" id="sidebar">
     <a href="https://waterbanana3118.github.io">首頁</a>
     <a href="#">尚未更新</a>
@@ -154,7 +169,6 @@
   <div class="hero">
     <div class="overlay"></div>
     <div class="card">
-      <h1>小龍貓あ彼多</h1>
       <p>居然這個網站會更新?!</p>
 
       <div class="link-card">
