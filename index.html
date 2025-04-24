@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>個人主頁</title>
+  <title>更新日誌</title>
   <link rel="icon" href="favicon.webp" type="image/webp">
   <style>
     * {
@@ -17,11 +17,13 @@
       color: #fff;
       overflow-x: hidden;
     }
+
     .post-meta {
-      font-size: 10px;
-      color: #cccccc;
+      font-size: 12px;
+      color: #bbbbbb;
       margin-top: 6px;
     }
+
     .menu-button {
       position: fixed;
       top: 20px;
@@ -39,9 +41,11 @@
       backdrop-filter: blur(6px);
       transition: background 0.3s;
     }
+
     .menu-button:hover {
       background: rgba(255, 255, 255, 0.3);
     }
+
     .menu-icon {
       font-size: 20px;
       color: white;
@@ -59,9 +63,11 @@
       transition: left 0.3s ease-in-out;
       z-index: 1000;
     }
+
     .sidebar.active {
       left: 0;
     }
+
     .sidebar a {
       display: block;
       color: white;
@@ -69,6 +75,7 @@
       margin: 20px 0;
       font-size: 16px;
     }
+
     .sidebar a:hover {
       text-decoration: underline;
     }
@@ -128,18 +135,16 @@
       cursor: pointer;
     }
 
-      /* 滑過去：浮起 */
     .link-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
-      /* 點下去：再往上抬一點點 + 陰影加深 */
     .link-card:active {
       transform: translateY(-6px);
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
     }
-    
+
     .link-card-content {
       padding: 14px;
     }
@@ -159,7 +164,7 @@
 </head>
 <body>
 
-  <div class="site-title">小龍貓あ彼多</div>
+  <div class="site-title">更新日誌</div>
 
   <button class="menu-button" onclick="toggleSidebar()">
     <span class="menu-icon">&#9776;</span>
@@ -188,6 +193,7 @@
         <div class="link-card-content">
           <strong>Instagram</strong>
           <p>@waterbanana3118</p>
+          <p class="post-meta">發佈於：2025年4月22日 閱讀更多…</p>
         </div>
       </div>
 
@@ -195,6 +201,7 @@
         <div class="link-card-content">
           <strong>Pixiv</strong>
           <p>@pixiv-id</p>
+          <p class="post-meta">發佈於：2025年4月20日 閱讀更多…</p>
         </div>
       </div>
 
@@ -202,6 +209,7 @@
         <div class="link-card-content">
           <strong>Discord</strong>
           <p>discord.gg/你的連結</p>
+          <p class="post-meta">發佈於：2025年4月18日 閱讀更多…</p>
         </div>
       </div>
 
