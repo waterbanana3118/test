@@ -19,7 +19,6 @@
       overflow-x: hidden;
     }
 
-    /* ==== 左上角漢堡按鈕 ==== */
     .menu-button {
       position: fixed;
       top: 20px;
@@ -45,7 +44,6 @@
       color: white;
     }
 
-    /* ==== 側邊欄樣式 ==== */
     .sidebar {
       position: fixed;
       top: 0;
@@ -104,15 +102,6 @@
       width: 100%;
     }
 
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border: 3px solid #fff;
-    }
-
     .card h1 {
       font-size: 28px;
       margin-bottom: 10px;
@@ -128,7 +117,7 @@
       max-width: 100%;
       margin: 12px auto;
       border-radius: 14px;
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(0, 0, 0, 0.4); /* 黑色 40% 透明 */
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s;
       text-align: left;
@@ -137,29 +126,24 @@
       transform: translateY(-3px);
     }
     .link-card-content {
-      display: flex;
-      align-items: center;
-      gap: 14px;
       padding: 14px;
-    }
-    .link-card img {
-      width: 36px;
-      height: 36px;
     }
     .link-card p {
       margin: 4px 0 0;
       font-size: 14px;
+      color: #fff;
+    }
+    .link-card strong {
+      color: #fff;
     }
   </style>
 </head>
 <body>
 
-  <!-- 左上角漢堡按鈕 -->
   <button class="menu-button" onclick="toggleSidebar()">
     <span class="menu-icon">&#9776;</span>
   </button>
 
-  <!-- 側邊欄 -->
   <div class="sidebar" id="sidebar">
     <a href="https://waterbanana3118.github.io">首頁</a>
     <a href="#">尚未更新</a>
@@ -170,27 +154,20 @@
   <div class="hero">
     <div class="overlay"></div>
     <div class="card">
-      <img class="avatar" src="your-avatar.webp" alt="頭像">
       <h1>小龍貓あ彼多</h1>
       <p>居然這個網站會更新?!</p>
 
       <div class="link-card">
         <div class="link-card-content">
-          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
-          <div>
-            <strong>YouTube</strong>
-            <p>小龍貓あ彼多</p>
-          </div>
+          <strong>YouTube</strong>
+          <p>小龍貓あ彼多</p>
         </div>
       </div>
 
       <div class="link-card">
         <div class="link-card-content">
-          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-          <div>
-            <strong>Instagram</strong>
-            <p>@waterbanana3118</p>
-          </div>
+          <strong>Instagram</strong>
+          <p>@waterbanana3118</p>
         </div>
       </div>
     </div>
