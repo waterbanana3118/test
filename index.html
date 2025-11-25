@@ -95,8 +95,8 @@
     .hero {
       position: relative;
       width: 100%;
-      height: 100vh;
-      background: url('background.png') no-repeat center center/cover;
+      min-height: 100vh; /* 原本是 height: 100vh; 改成 min-height */
+      background: url('background.png') center center / cover no-repeat fixed; /* 加上 fixed，並維持只用一張圖 */
       display: flex;
       justify-content: center;
       align-items: flex-start;
@@ -174,7 +174,7 @@
   <div class="sidebar" id="sidebar">
     <a href="https://waterbanana3118.github.io">首頁</a>
     <a href="#">尚未更新</a>
-    <a href="https://waterbanana3118.github.io/minecraft/">minecraft指令百科(施工中...)</a>
+    <a href="https://水banana3118.github.io/minecraft/">minecraft指令百科(施工中...)</a>
     <a href="https://waterbanana3118.github.io/test/">更新日誌</a>
   </div>
 
@@ -185,7 +185,7 @@
       <!-- 2025/11/25 最新 -->
       <div class="link-card">
         <div class="link-card-content">
-          <strong>(主頁)新增makerworld連結</strong>
+          <strong>(主頁)新增makerworld連結 new!!!</strong>
           <p>在這裡輸入這次更新的內容</p>
           <p class="post-meta">發佈於：2025年11月25日</p>
         </div>
@@ -194,7 +194,7 @@
       <!-- 2025/05/09 -->
       <div class="link-card">
         <div class="link-card-content">
-          <strong>(分頁)新增minecraft指令百科網站 new!!!</strong>
+          <strong>(分頁)新增minecraft指令百科網站</strong>
           <p>在這裡可以看到大部分的miinecraft指令</p>
           <p class="post-meta">發佈於：2025年5月9日</p>
         </div>
