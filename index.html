@@ -12,6 +12,23 @@
       padding: 0;
     }
     
+    .new-tag {
+      color: #ffd54f; /* 黃色 */
+      display: inline-block;
+      animation: bounce 0.8s infinite alternate ease-in-out;
+    }
+
+    /* 跳動動畫 */
+    @keyframes bounce {
+     0% {
+      transform: translateY(0);
+      a}
+      100% {
+        transform: translateY(-4px);
+      }
+    }
+
+
     body, html {
       height: 100%;
       font-family: 'Noto Sans TC', sans-serif;
@@ -185,7 +202,7 @@
       <!-- 2025/11/25 最新 -->
       <div class="link-card">
         <div class="link-card-content">
-          <strong>(主頁)新增makerworld連結 new!!!</strong>
+          <strong>(主頁)新增makerworld連結 <span class="new-tag">new!!!</span></strong>
           <p>在這裡輸入這次更新的內容</p>
           <p class="post-meta">發佈於：2025年11月25日</p>
         </div>
